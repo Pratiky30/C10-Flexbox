@@ -1,0 +1,90 @@
+Teacher activity 1 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Direction Demo</title>
+  <style>body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.controls button {
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row; /* Default */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 8px 12px;
+  color: #333;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar a:hover {
+  background-color: #007bff;
+  color: white;
+}</style>
+
+
+</head>
+<body>
+
+  <h2>Flex Direction Demo</h2>
+
+  <!-- Buttons to change flex-direction dynamically -->
+  <div class="controls">
+    <button onclick="changeDirection('row')">Row</button>
+    <button onclick="changeDirection('row-reverse')">Row-Reverse</button>
+    <button onclick="changeDirection('column')">Column</button>
+    <button onclick="changeDirection('column-reverse')">Column-Reverse</button>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <script>
+    function changeDirection(direction) {
+      document.getElementById('navbar').style.flexDirection = direction;
+    }
+  </script>
+
+</body>
+</html>
+
+
